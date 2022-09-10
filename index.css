@@ -1,0 +1,81 @@
+/* things like font-family are hoisted to root as vars to overview the website specs in one place */
+:root{
+    --body-bg: #eee;
+    --section-bg: #fff;
+    --para-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --main-font-family: 'Roboto', sans-serif;
+    --section-radius: 5px;
+    --section-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --seciton-border-color: #999;
+    --section-max-width: 800px;
+    --para-height: 1.5rem;
+    --emphasis-text-color: #d946ef;
+    --label-size: .9em;
+}
+body {
+    padding: 1.5rem 0;
+    font-family: var(--main-font-family);
+    background-color: var(--body-bg);
+}
+h2, h3, h4:not(.koalas), h5 {
+    margin-top: 0;
+}
+p, li {
+    font-family: var(--para-font-family);
+    line-height: var(--para-height);
+}
+li:not(:last-child) {
+    margin-bottom: .3rem;
+}
+.italic {
+    font-style: italic;
+}
+.emphasis {
+    font-style: bold;
+    color: var(--emphasis-text-color);
+}
+.label {
+    padding: .3rem;
+    font-size: var(--label-size);
+    font-style: italic;
+    display: flex;
+}
+.serial {
+    margin-right: .3rem;
+}
+.responsive-image {
+    width: 100%;
+    aspect-ratio: 1 / .8;
+    object-fit: cover;
+    object-position: center;
+}
+.section-wrap {
+    border-radius: var(--section-radius);
+    box-shadow: var(--section-shadow);
+    border-color: var(--seciton-border-color);
+    padding: 2rem 1.5rem;
+    background-color: var(--section-bg);
+    max-width: var(--section-max-width);
+    margin: .5rem auto;
+}
+#hero-image {
+    width: 100%;
+    height: auto;
+}
+/* responsive gallery */
+.image-gallery {
+    display: grid;
+    grid-gap: .5rem;
+}
+.kangaroos-gallery {
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+}
+.koalas-wombats-gallery {
+    grid-template-columns: repeat( auto-fit, minmax(150px, 1fr) );
+}
+.extinct-animals-gallery {
+    grid-template-columns: repeat( auto-fit, minmax(150px, 1fr) );
+}
+.birds-gallery {
+    grid-template-columns: repeat( auto-fit, minmax(120px, 1fr) );
+}
