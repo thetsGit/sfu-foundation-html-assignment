@@ -8,7 +8,9 @@
     --section-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
     --seciton-border-color: #999;
     --section-max-width: 800px;
-    --para-height: 1.5rem;
+    --para-height: 1.6em;
+    --para-letter-spacing: .08em;
+    --para-font-size: 1rem;
     --emphasis-text-color: #d946ef;
     --label-size: .9em;
 }
@@ -23,6 +25,8 @@ h2, h3, h4:not(.koalas), h5 {
 p, li {
     font-family: var(--para-font-family);
     line-height: var(--para-height);
+    font-size: var(--para-font-size);
+    letter-spacing: var(--para-letter-spacing);
 }
 li:not(:last-child) {
     margin-bottom: .3rem;
